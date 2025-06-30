@@ -1,0 +1,8 @@
+config:
+  show-name: false
+  icon-position: left
+  fallbak-icon: "?"
+
+icons:
+  nvim: ""
+  zathura: ""
