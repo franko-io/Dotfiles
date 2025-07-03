@@ -1,0 +1,15 @@
+# Use catpuccin theme, https://github.com/catppuccin/ghostty
+theme = catppuccin-macchiato.conf
+
+# Adjust Font
+font-size = 13
+font-family = JetBrainsMono NFM SemiBold
+font-family-bold = JetBrainsMono NFM ExtraBold
+font-family-italic = JetBrainsMono NFM SemiBold
+font-family-bold-italic = JetBrainsMono NFM ExtraBold
+
+# Random settings
+mouse-hide-while-typing = true
+resize-overlay = never
+window-padding-balance = true
+confirm-close-surface = false
