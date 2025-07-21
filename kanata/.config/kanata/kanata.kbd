@@ -1,0 +1,29 @@
+(defcfg
+  process-unmapped-keys yes
+  log-layer-changes no
+)
+
+(defvar
+  tap-time 200
+  hold-time 200
+)
+
+(defsrc
+  a s d f j k l scln
+)
+
+(defalias
+  a (tap-hold $tap-time $hold-time a lmet)
+  s (tap-hold $tap-time $hold-time s lalt)
+  d (tap-hold $tap-time $hold-time d lsft)
+  f (tap-hold $tap-time $hold-time f lctl)
+  j (tap-hold $tap-time $hold-time j rctl)
+  k (tap-hold $tap-time $hold-time k rsft)
+  l (tap-hold $tap-time $hold-time l ralt)
+  scln (tap-hold $tap-time $hold-time scln rmet)
+)
+
+;; Home row mods
+(deflayer home-row-mods
+  @a @s @d @f  @j @k @l @scln
+)
