@@ -51,7 +51,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='ls --color -lah'
+alias ll='ls --color -lah'
+alias clear='echo "Do not use clear, use Ctrl+L instead"'
 
 # Shell intergrations
 eval "$(fzf --zsh)"
