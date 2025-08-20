@@ -1,29 +1,34 @@
+;; global configuration options
 (defcfg
   process-unmapped-keys yes
   log-layer-changes no
 )
 
+;; timeout values
 (defvar
-  tap-time 200
-  hold-time 200
+  tap-time 300
+  hold-time 350
 )
 
+;; keys that will be modified
 (defsrc
-  a s d f j k l scln
+  caps spc esc h j k l
 )
 
+;; remapping between physical keys and functionality
 (defalias
-  a (tap-hold $tap-time $hold-time a lmet)
-  s (tap-hold $tap-time $hold-time s lalt)
-  d (tap-hold $tap-time $hold-time d lsft)
-  f (tap-hold $tap-time $hold-time f lctl)
-  j (tap-hold $tap-time $hold-time j rctl)
-  k (tap-hold $tap-time $hold-time k rsft)
-  l (tap-hold $tap-time $hold-time l ralt)
-  scln (tap-hold $tap-time $hold-time scln rmet)
+  space (tap-hold-press $tap-time $hold-time spc lmet)
+  capsword (caps-word 2000)
+  caps (tap-hold-press $tap-time $hold-time @capsword (layer-toggle cap-mod))
 )
 
-;; Home row mods
-(deflayer home-row-mods
-  @a @s @d @f  @j @k @l @scln
+;; default/base layer - always active
+(deflayer default
+  lctrl @space @caps _ _ _ _
 )
+
+;; shifted layer - activated by holding ESC
+(deflayer cap-mod
+  _ _ _ left down up rght
+)
+
