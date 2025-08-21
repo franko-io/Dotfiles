@@ -1,0 +1,12 @@
+[init]
+	defaultBranch = master
+[alias]
+	ls = stash list
+	s = status
+	p = pull
+	lg = log --oneline --graph --decorate --all
+	d = diff
+	ds = diff --cached
+	b = branch -vva
+[core]
+	editor = nvim -f
