@@ -25,6 +25,7 @@ vim.g.maplocalleader = '\\'
 require('lazy').setup({
   spec = {
     { import = 'plugins.ui' },
+    { import = 'plugins.snacks' },
     { import = 'plugins.tmux' },
   },
   -- Configure any other settings here. See the documentation for more details.
