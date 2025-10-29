@@ -34,6 +34,16 @@ return {
     { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
     { '<leader>E', function() Snacks.explorer({ cwd = vim.fn.expand('%:p:h') }) end, desc = 'Explorer (Current File)' },
     { '<leader>fe', function() Snacks.explorer({ focus = true }) end, desc = 'Focus Explorer' },
+
+    -- TODO Comments
+    { "<leader>tT", function() Snacks.picker.todo_comments() end, desc = "Todo/Fix/Note/Etc" },
+    { "<leader>tf", function() Snacks.picker.todo_comments({keywords = { "FIX" }}) end, desc = "Fix" },
+    { "<leader>tt", function() Snacks.picker.todo_comments({keywords = { "TODO" }}) end, desc = "Todo" },
+    { "<leader>th", function() Snacks.picker.todo_comments({keywords = { "HACK" }}) end, desc = "Hack" },
+    { "<leader>tw", function() Snacks.picker.todo_comments({keywords = { "WARN" }}) end, desc = "Warning" },
+    { "<leader>tp", function() Snacks.picker.todo_comments({keywords = { "PERF" }}) end, desc = "Performance" },
+    { "<leader>tn", function() Snacks.picker.todo_comments({keywords = { "NOTE" }}) end, desc = "Note" },
+    { "<leader>ts", function() Snacks.picker.todo_comments({keywords = { "TEST" }}) end, desc = "Test" },
   },
   -- stylua: ignore start
 }

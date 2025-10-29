@@ -27,6 +27,7 @@ require('lazy').setup({
     { import = 'plugins.ui' },
     { import = 'plugins.snacks' },
     { import = 'plugins.tmux' },
+    { import = 'plugins.misc' },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
