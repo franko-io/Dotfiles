@@ -1,6 +1,5 @@
 return {
   'folke/snacks.nvim',
-
   -- stylua: ignore start
   keys = {
     -- Top Pickers & Explorer
@@ -8,7 +7,6 @@ return {
     { "<leader>/", function() Snacks.picker.lines({ layout = "select" }) end, desc = "Search Current Buffer" },
     { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
     { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
-    { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
 
     -- Find
     { '<leader>ff', function() Snacks.picker.files() end, desc = 'Find Files' },
@@ -31,6 +29,11 @@ return {
     { "<leader>sk", function() Snacks.picker.keymaps({ layout = "ivy" }) end, desc = "Keymaps" },
     { "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
     { "<leader>sc", function() Snacks.picker.colorschemes({ layout = "vertical" }) end, desc = "Colorschemes" },
+
+    -- Explorer
+    { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
+    { '<leader>E', function() Snacks.explorer({ cwd = vim.fn.expand('%:p:h') }) end, desc = 'Explorer (Current File)' },
+    { '<leader>fe', function() Snacks.explorer({ focus = true }) end, desc = 'Focus Explorer' },
   },
   -- stylua: ignore start
 }
