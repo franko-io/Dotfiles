@@ -21,6 +21,8 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   spec = {
     { import = 'plugins.ui' },
+    { import = 'plugins.lsp' },
+    { import = 'plugins.completion' },
     { import = 'plugins.snacks' },
     { import = 'plugins.tmux' },
     { import = 'plugins.misc' },
@@ -30,4 +32,5 @@ require('lazy').setup({
   install = { colorscheme = { 'tokyonight' } },
   -- automatically check for plugin updates
   checker = { enabled = false },
+  rocks = { enabled = false },
 })
