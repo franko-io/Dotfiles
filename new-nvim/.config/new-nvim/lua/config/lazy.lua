@@ -23,6 +23,7 @@ require('lazy').setup({
     { import = 'plugins.ui' },
     { import = 'plugins.lsp' },
     { import = 'plugins.completion' },
+    { import = 'plugins.formatting' },
     { import = 'plugins.snacks' },
     { import = 'plugins.tmux' },
     { import = 'plugins.misc' },
