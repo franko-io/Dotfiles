@@ -6,13 +6,6 @@ return {
     config = function()
       require('tokyonight').setup({
         style = 'moon',
-        terminal_colors = true,
-        styles = {
-          comments = { italic = true },
-          keywords = { italic = true },
-          functions = {},
-          variables = {},
-        },
         dim_inactive = false,
         lualine_bold = false,
         on_colors = function(colors)

@@ -1,6 +1,5 @@
 return {
   'folke/snacks.nvim',
-  ---@type snacks.Config
   opts = function()
     local has_space = vim.o.columns >= 100 and vim.o.lines >= 40
 
