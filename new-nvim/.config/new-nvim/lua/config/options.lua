@@ -1,6 +1,6 @@
 -- Set leader key
-vim.g.mapleader = '<Space>'
-vim.g.maplocalleader = '<Space>'
+vim.g.mapleader = ' '
+vim.g.maplocalleader = '\\'
 
 vim.g.have_nerd_font = true
 
@@ -11,6 +11,7 @@ vim.wo.relativenumber = true
 -- Mouse support
 vim.opt.mouse = 'a'
 
+-- Mode display
 vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim
