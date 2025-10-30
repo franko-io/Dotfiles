@@ -55,3 +55,12 @@ vim.opt.scrolloff = 10
 
 -- Confirm before closing unsaved files
 vim.opt.confirm = true
+
+-- Highlight when yanking
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Higlight when yanking text',
+  group = vim.api.nvim_create_augroup('highilght-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
