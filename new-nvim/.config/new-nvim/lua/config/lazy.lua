@@ -16,6 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- TODO: Explore config options -> https://lazy.folke.io/
+vim.keymap.set('n', '<leader>sl', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
 
 -- Setup lazy.nvim
 require('lazy').setup({

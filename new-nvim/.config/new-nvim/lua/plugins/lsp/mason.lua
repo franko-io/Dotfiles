@@ -1,3 +1,5 @@
+vim.keymap.set('n', '<leader>sm', '<cmd>Mason<cr>', { desc = 'Open Mason' })
+
 return {
   'mason-org/mason-lspconfig.nvim',
   dependencies = {
