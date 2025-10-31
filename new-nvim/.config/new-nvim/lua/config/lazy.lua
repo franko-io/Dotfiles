@@ -26,6 +26,7 @@ require('lazy').setup({
     { import = 'plugins.completion' },
     { import = 'plugins.formatting' },
     { import = 'plugins.snacks' },
+    { import = 'plugins.mini' },
     { import = 'plugins.tmux' },
     { import = 'plugins.misc' },
   },
