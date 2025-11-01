@@ -34,7 +34,7 @@ vim.opt.signcolumn = 'yes'
 
 -- Update time
 vim.opt.updatetime = 250
-vim.opt.timeoutlen = 500
+vim.opt.timeoutlen = 750
 
 -- Splits
 vim.opt.splitright = true
