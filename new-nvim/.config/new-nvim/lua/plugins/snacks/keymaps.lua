@@ -9,15 +9,15 @@ return {
     { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
 
     -- Find
-    { '<leader>ff', function() Snacks.picker.files() end, desc = 'Find Files' },
-    { '<leader>fF', function() Snacks.picker.files({ hidden = true }) end, desc = 'Find Files (hidden)' },
-    { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
-    { "<leader>fr", function() Snacks.picker.recent() end, desc = "Recent" },
+    { '<leader>sf', function() Snacks.picker.files() end, desc = 'Find Files' },
+    { '<leader>sF', function() Snacks.picker.files({ hidden = true }) end, desc = 'Find Files (hidden)' },
+    { "<leader>sp", function() Snacks.picker.projects() end, desc = "Projects" },
+    { "<leader>sr", function() Snacks.picker.recent() end, desc = "Recent" },
 
     -- Grep
-    { '<leader>gg', function() Snacks.picker.grep() end, desc = 'Grep' },
-    { '<leader>gG', function() Snacks.picker.grep({ hidden = true }) end, desc = 'Grep (hidden)' },
-    { "<leader>gb", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
+    { '<leader>sg', function() Snacks.picker.grep() end, desc = 'Grep' },
+    { '<leader>sG', function() Snacks.picker.grep({ hidden = true }) end, desc = 'Grep (hidden)' },
+    { "<leader>sb", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
 
     -- Config
     { '<leader>cf', function() Snacks.picker.files({ cwd = vim.fn.stdpath('config'), hidden = true }) end, desc = 'Find Config Files' },
