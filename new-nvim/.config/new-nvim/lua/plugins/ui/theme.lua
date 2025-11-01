@@ -6,11 +6,10 @@ return {
     config = function()
       require('tokyonight').setup({
         style = 'moon',
-        dim_inactive = false,
-        lualine_bold = false,
         on_colors = function(colors)
           colors.bg = '#24273a'
         end,
+        on_highlights = function(_, _) end,
       })
 
       -- Load the colorscheme
