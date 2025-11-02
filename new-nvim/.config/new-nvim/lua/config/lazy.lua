@@ -21,14 +21,15 @@ vim.keymap.set('n', '<leader>sl', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
 -- Setup lazy.nvim
 require('lazy').setup({
   spec = {
-    { import = 'plugins.ui' },
-    { import = 'plugins.lsp' },
+    { import = 'plugins.code' },
     { import = 'plugins.completion' },
     { import = 'plugins.formatting' },
-    { import = 'plugins.snacks' },
-    { import = 'plugins.mini' },
-    { import = 'plugins.tmux' },
+    { import = 'plugins.git' },
+    { import = 'plugins.lsp' },
     { import = 'plugins.misc' },
+    { import = 'plugins.snacks' },
+    { import = 'plugins.tmux' },
+    { import = 'plugins.ui' },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
