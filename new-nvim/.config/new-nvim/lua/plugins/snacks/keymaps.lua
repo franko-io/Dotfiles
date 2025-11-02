@@ -2,11 +2,15 @@ return {
   'folke/snacks.nvim',
   -- stylua: ignore start
   keys = {
-    -- Top Pickers & Explorer
-    { "<leader><space>", function() Snacks.picker.buffers() end, desc = "Buffers" },
-    { "<leader>/", function() Snacks.picker.lines({ layout = "select" }) end, desc = "Search Current Buffer" },
+    -- General
     { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
     { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
+
+    -- Buffers
+    { "<leader><space>", function() Snacks.picker.buffers() end, desc = "Buffers" },
+    { "<leader>/", function() Snacks.picker.lines({ layout = "select" }) end, desc = "Search Current Buffer" },
+    { "<leader>sb", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
+    { "<leader>db", function() Snacks.bufdelete() end, desc = "Delete Buffer" },
 
     -- Find
     { '<leader>sf', function() Snacks.picker.files() end, desc = 'Find Files' },
@@ -16,8 +20,8 @@ return {
 
     -- Grep
     { '<leader>sg', function() Snacks.picker.grep() end, desc = 'Grep' },
+    { '<leader>sw', function() Snacks.picker.grep_word() end, desc = 'Grep word', mode = {'n', 'x'}},
     { '<leader>sG', function() Snacks.picker.grep({ hidden = true }) end, desc = 'Grep (hidden)' },
-    { "<leader>sb", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
 
     -- Config
     { '<leader>cf', function() Snacks.picker.files({ cwd = vim.fn.stdpath('config'), hidden = true }) end, desc = 'Find Config Files' },
@@ -34,6 +38,12 @@ return {
     { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
     { '<leader>E', function() Snacks.explorer({ cwd = vim.fn.expand('%:p:h') }) end, desc = 'Explorer (Current File)' },
     { '<leader>fe', function() Snacks.explorer({ focus = true }) end, desc = 'Focus Explorer' },
+
+    -- Git
+    { '<leader>gl', function() Snacks.lazygit() end, desc = 'Open lazygit' },
+    { '<leader>gb', function() Snacks.picker.git_branches() end, desc = 'Git branches' },
+    { '<leader>gc', function() Snacks.lazygit.log() end, desc = 'Git log' },
+    { '<leader>gg', function() Snacks.git.blame_line() end, desc = 'Git blame' },
 
     -- TODO Comments
     { "<leader>tT", function() Snacks.picker.todo_comments() end, desc = "Todo/Fix/Note/Etc" },
