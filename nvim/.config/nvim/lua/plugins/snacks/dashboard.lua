@@ -50,7 +50,7 @@ return {
             section = 'terminal',
             cmd = 'cbonsai --live --time=0.01 --life=42',
             pane = 2,
-            height = math.floor(vim.o.lines * 0.65),
+            height = math.floor(vim.o.lines * 0.75),
             width = math.floor(vim.o.columns * 0.40),
           } or nil,
         },
