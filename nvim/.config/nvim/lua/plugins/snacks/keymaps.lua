@@ -42,8 +42,12 @@ return {
     -- Git
     { '<leader>gl', function() Snacks.lazygit() end, desc = 'Open lazygit' },
     { '<leader>gb', function() Snacks.picker.git_branches() end, desc = 'Git branches' },
-    { '<leader>gc', function() Snacks.lazygit.log() end, desc = 'Git log' },
+    { '<leader>gc', function() Snacks.picker.git_log() end, desc = 'Git log' },
     { '<leader>gg', function() Snacks.git.blame_line() end, desc = 'Git blame' },
+    { '<leader>gd', function() Snacks.picker.git_diff() end, desc = 'Git diff' },
+    { '<leader>gs', function() Snacks.picker.git_status() end, desc = 'Git status' },
+    { '<leader>gf', function() Snacks.picker.git_log_line() end, desc = 'Git log line' },
+    { '<leader>gF', function() Snacks.picker.git_log_file() end, desc = 'Git log file' },
 
     -- TODO Comments
     { "<leader>tT", function() Snacks.picker.todo_comments() end, desc = "Todo/Fix/Note/Etc" },
