@@ -45,9 +45,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     opts.desc = 'Show workspace symbols'
     keymap.set('n', '<leader>ws', function() Snacks.picker.lsp_workspace_symbols() end, opts)
-
-    opts.desc = 'Restart LSP server'
-    keymap.set('n', '<leader>rs', ':LspRestart<CR>', opts)
     -- stylua: ignore end
   end,
 })
