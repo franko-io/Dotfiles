@@ -6,3 +6,4 @@ config:
 icons:
   nvim: ""
   zathura: ""
+  R: ""
