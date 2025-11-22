@@ -96,3 +96,14 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.formatoptions:remove({ 'c', 'r', 'o' })
   end,
 })
+
+-- C++ specific indentation settings
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'cpp', 'c', 'h', 'hpp', 'cc', 'cxx' },
+  callback = function()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+    vim.opt_local.softtabstop = 2
+    vim.opt_local.expandtab = true
+  end,
+})
