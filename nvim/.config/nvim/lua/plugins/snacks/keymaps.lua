@@ -26,6 +26,7 @@ return {
     -- Config
     { '<leader>cf', function() Snacks.picker.files({ cwd = vim.fn.stdpath('config'), hidden = true }) end, desc = 'Find Config Files' },
     { '<leader>cg', function() Snacks.picker.grep({ cwd = vim.fn.stdpath('config'), hidden = true }) end, desc = 'Grep Config Files' },
+    { '<leader>ce', function() Snacks.picker.explorer({ cwd = vim.fn.stdpath('config'), hidden = true }) end, desc = 'Explorer (Config dir)' },
 
     -- Search
     { "<leader>sh", function() Snacks.picker.help({ layout = "ivy" }) end, desc = "Help Pages" },
