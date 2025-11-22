@@ -23,6 +23,7 @@ return {
       'lua_ls',
       'pyright',
       'r_language_server',
+      'clangd',
     },
     servers = {},
   },

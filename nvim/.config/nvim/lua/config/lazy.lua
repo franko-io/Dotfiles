@@ -24,6 +24,7 @@ require('lazy').setup({
     { import = 'plugins.code' },
     { import = 'plugins.completion' },
     { import = 'plugins.formatting' },
+    { import = 'plugins.linting' },
     { import = 'plugins.git' },
     { import = 'plugins.lsp' },
     { import = 'plugins.misc' },
