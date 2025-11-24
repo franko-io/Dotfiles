@@ -62,21 +62,21 @@ return {
         set_jumps = true,
         goto_next_start = {
           [']m'] = '@function.outer',
-          [']]'] = '@class.outer',
+          [']c'] = '@class.outer',
           [']a'] = '@parameter.inner',
         },
         goto_next_end = {
           [']M'] = '@function.outer',
-          [']['] = '@class.outer',
+          [']C'] = '@class.outer',
         },
         goto_previous_start = {
           ['[m'] = '@function.outer',
-          ['[['] = '@class.outer',
+          ['[c'] = '@class.outer',
           ['[a'] = '@parameter.inner',
         },
         goto_previous_end = {
           ['[M'] = '@function.outer',
-          ['[]'] = '@class.outer',
+          ['[C'] = '@class.outer',
         },
         goto_next = {
           [']i'] = '@conditional.outer',
