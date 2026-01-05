@@ -6,8 +6,8 @@
 
 ;; timeout values
 (defvar
-  tap-time 300
-  hold-time 350
+  tap-time 200
+  hold-time 250
 )
 
 ;; keys that will be modified
