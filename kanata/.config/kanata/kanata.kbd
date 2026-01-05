@@ -17,18 +17,18 @@
 
 ;; remapping between physical keys and functionality
 (defalias
-  space (tap-hold-press $tap-time $hold-time spc lmet)
+  space (tap-hold $tap-time $hold-time spc lmet)
   capsword (caps-word 2000)
-  caps (tap-hold-press $tap-time $hold-time @capsword (layer-toggle cap-mod))
+  esc (tap-hold-press $tap-time $hold-time @capsword (layer-toggle esc-mod))
 )
 
 ;; default/base layer - always active
 (deflayer default
-  lctrl @space @caps _ _ _ _
+  lctrl @space @esc _ _ _ _
 )
 
 ;; shifted layer - activated by holding ESC
-(deflayer cap-mod
+(deflayer esc-mod
   _ _ _ left down up rght
 )
 
