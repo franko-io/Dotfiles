@@ -18,8 +18,7 @@
 ;; remapping between physical keys and functionality
 (defalias
   space (tap-hold $tap-time $hold-time spc lmet)
-  capsword (caps-word 2000)
-  esc (tap-hold-press $tap-time $hold-time @capsword (layer-toggle esc-mod))
+  esc (tap-hold-press $tap-time $hold-time esc (layer-toggle esc-mod))
 )
 
 ;; default/base layer - always active
