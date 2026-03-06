@@ -1,0 +1,12 @@
+[Unit]
+Description=Spotify Player Daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/spotify_player
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
