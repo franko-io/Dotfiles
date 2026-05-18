@@ -1,5 +1,7 @@
+-- NOTE: Disabled since not using R
 return {
   'jpalardy/vim-slime',
+  enabled = false,
   init = function()
     vim.g.slime_target = 'tmux'
     vim.g.slime_no_mappings = true
