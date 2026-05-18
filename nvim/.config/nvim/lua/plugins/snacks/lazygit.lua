@@ -4,7 +4,7 @@ return {
     lazygit = {},
     styles = {
       lazygit = {
-        backdrop = false,
+        -- backdrop = true,
       },
     },
   },
