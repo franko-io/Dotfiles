@@ -1,6 +1,5 @@
 return {
   'folke/snacks.nvim',
-  commit = '44f71d2113866c0a6f16a8fa70af8933c1d87919',
   priority = 1000,
   lazy = false,
   opts = {
