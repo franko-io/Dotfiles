@@ -97,6 +97,24 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
+-- Enable highlighting
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = '*',
+  callback = function()
+    pcall(vim.treesitter.start)
+  end,
+})
+
+-- Disable for large files.
+vim.api.nvim_create_autocmd('BufReadPre', {
+  callback = function(args)
+    local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(args.buf))
+    if ok and stats and stats.size > 100 * 1024 then
+      vim.treesitter.stop(args.buf)
+    end
+  end,
+})
+
 -- C++ specific indentation settings
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'cpp', 'c', 'h', 'hpp', 'cc', 'cxx' },
