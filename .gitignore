@@ -1,3 +1,4 @@
 btop/.config/btop/btop.log
 kanata/.config/kanata/kanata.kbd.bak
 systemd/.config/systemd/user/default.target.wants/kanata.service
+nvim/.config/nvim/lazy-lock.json
