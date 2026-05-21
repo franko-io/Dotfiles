@@ -29,10 +29,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
     keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
 
     opts.desc = 'Show buffer diagnostics'
-    keymap.set('n', '<leader>D', function() Snacks.picker.diagnostics_buffer() end, opts)
+    keymap.set('n', '<leader>dD', function() Snacks.picker.diagnostics_buffer() end, opts)
 
     opts.desc = 'Show line diagnostics'
-    keymap.set('n', '<leader>d', vim.diagnostic.open_float, opts)
+    keymap.set('n', '<leader>dd', vim.diagnostic.open_float, opts)
 
     opts.desc = 'Go to previous diagnostic'
     keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1 }) end, opts)
