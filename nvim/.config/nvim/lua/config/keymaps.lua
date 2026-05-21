@@ -7,3 +7,14 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<cr>', { desc = 'Clear search highl
 -- Buffer navigation
 vim.keymap.set('n', '<S-h>', '<cmd>bprevious<cr>', { desc = 'Previous buffer' })
 vim.keymap.set('n', '<S-l>', '<cmd>bnext<cr>', { desc = 'Next buffer' })
+
+-- New ghostty window
+vim.keymap.set('n', '<leader>og', function()
+  local file = vim.api.nvim_buf_get_name(0)
+  if file == '' then
+    vim.fn.jobstart({ 'ghostty', '-e', 'nvim' })
+  else
+    vim.fn.jobstart({ 'ghostty', '-e', 'nvim', file })
+  end
+  vim.cmd.bprevious()
+end, { desc = 'Open current file in new Ghostty window' })
