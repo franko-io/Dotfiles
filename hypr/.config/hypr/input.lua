@@ -18,6 +18,9 @@ hl.config({
       natural_scroll = true,
     },
   },
+  cursor = {
+    inactive_timeout = 3,
+  },
 })
 
 hl.gesture({ fingers = 3, direction = 'horizontal', action = 'workspace' })
