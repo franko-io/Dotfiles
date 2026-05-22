@@ -104,3 +104,18 @@ hl.bind('SHIFT + XF86AudioNext', hl.dsp.exec_cmd('playerctl position 10+'), { lo
 hl.bind('SHIFT + XF86AudioPrev', hl.dsp.exec_cmd('playerctl position 10-'), { locked = false })
 hl.bind(shiftMod .. ' + XF86AudioRaiseVolume', hl.dsp.exec_cmd('playerctl position 10+'), { locked = false })
 hl.bind(shiftMod .. ' + XF86AudioLowerVolume', hl.dsp.exec_cmd('playerctl position 10-'), { locked = false })
+
+-- Add a submap for toggling monitors on/off
+local monitors = require('monitors')
+hl.bind(mainMod .. ' + ESCAPE', hl.dsp.submap('toggle-monitors'))
+hl.define_submap('toggle-monitors', function()
+  for key, val in ipairs(monitors) do
+    hl.bind(tostring(key), function()
+      val.disabled = not val.disabled
+      hl.monitor(val)
+      hl.dispatch((hl.dsp.submap('reset')))
+    end)
+  end
+
+  hl.bind('escape', hl.dsp.submap('reset')) -- exit submap
+end)

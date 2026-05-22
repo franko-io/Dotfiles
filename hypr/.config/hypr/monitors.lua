@@ -39,16 +39,4 @@ for _, val in ipairs(monitors) do
   hl.monitor(val)
 end
 
--- Add a submap for toggling monitors on/off
-hl.bind('SUPER + ESCAPE', hl.dsp.submap('toggle-monitors'))
-hl.define_submap('toggle-monitors', function()
-  for key, val in ipairs(monitors) do
-    hl.bind(tostring(key), function()
-      val.disabled = not val.disabled
-      hl.monitor(val)
-      hl.dispatch((hl.dsp.submap('reset')))
-    end)
-  end
-
-  hl.bind('escape', hl.dsp.submap('reset')) -- exit submap
-end)
+return monitors
