@@ -81,6 +81,19 @@ hl.bind(mainMod .. ' + mouse_up', hl.dsp.focus({ workspace = 'e-1' }))
 hl.bind(mainMod .. ' + mouse:272', hl.dsp.window.drag(), { mouse = true })
 hl.bind(shiftMod .. ' + mouse:272', hl.dsp.window.resize(), { mouse = true })
 
+-- Add a submap for resizing windows
+hl.bind(mainMod .. ' + BACKSLASH', hl.dsp.submap('resize'))
+hl.define_submap('resize', function()
+  hl.bind('L', hl.dsp.window.resize({ x = 20, y = 0, relative = true }), { repeating = true })
+  hl.bind('H', hl.dsp.window.resize({ x = -20, y = 0, relative = true }), { repeating = true })
+  hl.bind('K', hl.dsp.window.resize({ x = 0, y = 20, relative = true }), { repeating = true })
+  hl.bind('J', hl.dsp.window.resize({ x = 0, y = -20, relative = true }), { repeating = true })
+
+  hl.bind('escape', hl.dsp.submap('reset')) -- exit submap
+end)
+
+-- Keybinds further down will be global again...
+
 -- Multimedia keys
 -- stylua: ignore start
 hl.bind('XF86AudioRaiseVolume', hl.dsp.exec_cmd('wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+'), { locked = false, repeating = true })
