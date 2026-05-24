@@ -2,9 +2,12 @@
 ---- KEYBINDINGS ----
 ---------------------
 
+local monitors = require('monitors')
+
 -- Mod keys
 local mainMod = 'SUPER'
 local shiftMod = 'SHIFT + SUPER'
+local ctrlMod = 'CTRL + SUPER'
 
 -- My programs
 local terminal = 'ghostty'
@@ -40,6 +43,11 @@ hl.bind(mainMod .. ' + V', hl.dsp.window.float({ action = 'toggle' }))
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. ' + S', hl.dsp.workspace.toggle_special('magic'))
 hl.bind(mainMod .. ' + SHIFT + S', hl.dsp.window.move({ workspace = 'special:magic' }))
+
+-- Move workspaces between monitors
+for key, val in ipairs(monitors) do
+  hl.bind(ctrlMod .. ' + ' .. tostring(key), hl.dsp.workspace.move({ monitor = val.output }))
+end
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. ' + left', hl.dsp.focus({ direction = 'left' }))
@@ -119,7 +127,6 @@ hl.bind(shiftMod .. ' + XF86AudioRaiseVolume', hl.dsp.exec_cmd('playerctl positi
 hl.bind(shiftMod .. ' + XF86AudioLowerVolume', hl.dsp.exec_cmd('playerctl position 10-'), { locked = false })
 
 -- Add a submap for toggling monitors on/off
-local monitors = require('monitors')
 hl.bind(mainMod .. ' + ESCAPE', hl.dsp.submap('toggle-monitors'))
 hl.define_submap('toggle-monitors', function()
   for key, val in ipairs(monitors) do
