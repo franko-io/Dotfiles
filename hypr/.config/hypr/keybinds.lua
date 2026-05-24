@@ -37,7 +37,8 @@ hl.bind(shiftMod .. ' + CONTROL + PRINT', hl.dsp.exec_cmd('hyprshot -m region --
 
 hl.bind(mainMod .. ' + Q', hl.dsp.window.close())
 hl.bind(mainMod .. ' + SHIFT + Q', hl.dsp.window.kill())
-hl.bind(mainMod .. ' + F', hl.dsp.window.fullscreen())
+hl.bind(mainMod .. ' + M', hl.dsp.window.fullscreen({ mode = 'maximized' }))
+hl.bind(mainMod .. ' + F', hl.dsp.window.fullscreen({ mode = 'fullscreen' }))
 hl.bind(mainMod .. ' + V', hl.dsp.window.float({ action = 'toggle' }))
 
 -- Example special workspace (scratchpad)
