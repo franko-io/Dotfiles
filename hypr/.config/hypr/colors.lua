@@ -1,0 +1,31 @@
+-- Catppuccin Macchiato theme
+local M = {}
+
+M.rosewater = '0xfff4dbd6'
+M.flamingo = '0xfff0c6c6'
+M.pink = '0xfff5bde6'
+M.mauve = '0xffc6a0f6'
+M.red = '0xffed8796'
+M.maroon = '0xffee99a0'
+M.peach = '0xfff5a97f'
+M.yellow = '0xffeed49f'
+M.green = '0xffa6da95'
+M.teal = '0xff8bd5ca'
+M.sky = '0xff91d7e3'
+M.sapphire = '0xff7dc4e4'
+M.blue = '0xff8aadf4'
+M.lavender = '0xffb7bdf8'
+M.text = '0xffcad3f5'
+M.subtext1 = '0xffb8c0e0'
+M.subtext0 = '0xffa5adcb'
+M.overlay2 = '0xff939ab7'
+M.overlay1 = '0xff8087a2'
+M.overlay0 = '0xff6e738d'
+M.surface2 = '0xff5b6078'
+M.surface1 = '0xff494d64'
+M.surface0 = '0xff363a4f'
+M.base = '0xff24273a'
+M.mantle = '0xff1e2030'
+M.crust = '0xff181926'
+
+return M
