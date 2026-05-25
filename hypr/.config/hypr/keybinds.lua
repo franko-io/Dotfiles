@@ -40,6 +40,7 @@ hl.bind(mainMod .. ' + SHIFT + Q', hl.dsp.window.kill())
 hl.bind(mainMod .. ' + M', hl.dsp.window.fullscreen({ mode = 'maximized' }))
 hl.bind(mainMod .. ' + F', hl.dsp.window.fullscreen({ mode = 'fullscreen' }))
 hl.bind(mainMod .. ' + V', hl.dsp.window.float({ action = 'toggle' }))
+hl.bind(mainMod .. ' + P', hl.dsp.layout('togglesplit'))
 
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. ' + S', hl.dsp.workspace.toggle_special('magic'))
@@ -100,8 +101,6 @@ hl.define_submap('resize', function()
 
   hl.bind('escape', hl.dsp.submap('reset')) -- exit submap
 end)
-
--- Keybinds further down will be global again...
 
 -- Multimedia keys
 -- stylua: ignore start
