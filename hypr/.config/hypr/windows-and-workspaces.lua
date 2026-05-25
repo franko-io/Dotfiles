@@ -30,3 +30,13 @@ hl.window_rule({
   move = '20 monitor_h-120',
   float = true,
 })
+
+hl.window_rule({
+  name = 'clipse',
+  match = {
+    class = 'com.example.clipse',
+  },
+  stay_focused = true,
+  float = true,
+  size = { 'monitor_w*0.65', 'monitor_h*0.65' },
+})
