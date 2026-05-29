@@ -139,3 +139,6 @@ hl.define_submap('toggle-monitors', function()
 
   hl.bind('escape', hl.dsp.submap('reset')) -- exit submap
 end)
+
+-- wl-freeze, see https://github.com/Zerodya/wl-freeze
+hl.bind(ctrlMod .. ' + Q', hl.dsp.exec_cmd('wl-freeze -a'))
