@@ -13,4 +13,4 @@ mouse-hide-while-typing = true
 resize-overlay = never
 window-padding-balance = true
 confirm-close-surface = false
-mouse-scroll-multiplier = 0.25
+mouse-scroll-multiplier = 0.75
