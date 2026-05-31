@@ -24,6 +24,8 @@ return {
       html = { 'prettier' },
       r = { 'styler' },
       cpp = { 'clang-format' },
+      json = { 'prettier' },
+      jsonc = { 'prettier' },
 
       -- You can customize some of the format options for the filetype (:help conform.format)
       rust = { 'rustfmt', lsp_format = 'fallback' },
