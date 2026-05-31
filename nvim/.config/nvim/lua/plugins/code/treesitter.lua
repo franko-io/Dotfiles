@@ -8,6 +8,7 @@ return {
         'python',
         'bash',
         'c',
+        'json',
         'lua',
         'vim',
         'vimdoc',
