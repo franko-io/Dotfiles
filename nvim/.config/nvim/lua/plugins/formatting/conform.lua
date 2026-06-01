@@ -19,18 +19,14 @@ return {
   opts = {
     formatters_by_ft = {
       lua = { 'stylua' },
-      -- Conform will run multiple formatters sequentially
       python = { 'isort', 'black' },
       html = { 'prettier' },
       r = { 'styler' },
       cpp = { 'clang-format' },
       json = { 'prettier' },
       jsonc = { 'prettier' },
-
-      -- You can customize some of the format options for the filetype (:help conform.format)
-      rust = { 'rustfmt', lsp_format = 'fallback' },
-      -- Conform will run the first available formatter
-      javascript = { 'prettierd', 'prettier', stop_after_first = true },
+      rust = { 'rustfmt' },
+      javascript = { 'prettier' },
     },
     formatters = {
       black = {
