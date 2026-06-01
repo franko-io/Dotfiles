@@ -46,6 +46,7 @@ return {
     { '<leader>gc', function() Snacks.picker.git_log() end, desc = 'Git log' },
     { '<leader>gg', function() Snacks.git.blame_line() end, desc = 'Git blame' },
     { '<leader>gd', function() Snacks.picker.git_diff() end, desc = 'Git diff' },
+    { '<leader>gD', function() Snacks.picker.git_diff({ staged = true }) end, desc = 'Git diff staged' },
     { '<leader>gs', function() Snacks.picker.git_status() end, desc = 'Git status' },
     { '<leader>gf', function() Snacks.picker.git_log_line() end, desc = 'Git log line' },
     { '<leader>gF', function() Snacks.picker.git_log_file() end, desc = 'Git log file' },
