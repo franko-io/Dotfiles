@@ -142,3 +142,6 @@ end)
 
 -- wl-freeze, see https://github.com/Zerodya/wl-freeze
 hl.bind(ctrlMod .. ' + Q', hl.dsp.exec_cmd('wl-freeze -a'))
+
+-- Toggle waybar, see https://github.com/Alexays/Waybar
+hl.bind(mainMod .. ' + W', hl.dsp.exec_cmd('killall -SIGUSR1 waybar'))
