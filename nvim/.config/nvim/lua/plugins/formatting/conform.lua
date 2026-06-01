@@ -27,6 +27,7 @@ return {
       jsonc = { 'prettier' },
       rust = { 'rustfmt' },
       javascript = { 'prettier' },
+      css = { 'prettier' },
     },
     formatters = {
       black = {
