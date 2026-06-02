@@ -76,10 +76,28 @@ hl.animation({ leaf = 'workspacesOut', enabled = true, speed = 1.94, bezier = 'a
 hl.animation({ leaf = 'zoomFactor', enabled = true, speed = 7, bezier = 'quick' })
 
 -- "Smart gaps" / "No gaps when only", ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
-hl.workspace_rule({ workspace = 'w[tv1]', gaps_out = 0, gaps_in = 0 })
-hl.workspace_rule({ workspace = 'f[1]', gaps_out = 0, gaps_in = 0 })
-hl.window_rule({ name = 'no-gaps-wtv1', match = { float = false, workspace = 'w[tv1]' }, border_size = 0, rounding = 0 })
-hl.window_rule({ name = 'no-gaps-f1', match = { float = false, workspace = 'f[1]' }, border_size = 0, rounding = 0 })
+-- stylua: ignore start
+local smart_gaps = {}
+
+function smart_gaps.enable()
+  hl.workspace_rule({ workspace = 'w[tv1]', gaps_out = 0, gaps_in = 0 })
+  hl.workspace_rule({ workspace = 'f[1]', gaps_out = 0, gaps_in = 0 })
+  hl.window_rule({ name = 'no-gaps-wtv1', match = { float = false, workspace = 'w[tv1]' }, border_size = 0, rounding = 0 })
+  hl.window_rule({ name = 'no-gaps-f1', match = { float = false, workspace = 'f[1]' }, border_size = 0, rounding = 0 })
+end
+
+function smart_gaps.disable()
+  local gaps_in = hl.get_config('general.gaps_in')
+  local gaps_out = hl.get_config('general.gaps_out')
+  local rounding = hl.get_config('decoration.rounding')
+  local border_size = hl.get_config('general.border_size')
+
+  hl.workspace_rule({ workspace = 'w[tv1]', gaps_out = gaps_out, gaps_in = gaps_in })
+  hl.workspace_rule({ workspace = 'f[1]', gaps_out = gaps_out, gaps_in = gaps_in })
+  hl.window_rule({ name = 'no-gaps-wtv1', match = { float = false, workspace = 'w[tv1]' }, border_size = border_size, rounding = rounding })
+  hl.window_rule({ name = 'no-gaps-f1', match = { float = false, workspace = 'f[1]' }, border_size = border_size, rounding = rounding })
+end
+-- stylua: ignore end
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
@@ -102,3 +120,5 @@ hl.config({
     fullscreen_on_one_column = true,
   },
 })
+
+return smart_gaps
