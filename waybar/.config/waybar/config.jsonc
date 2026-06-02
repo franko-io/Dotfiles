@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["hyprland/workspaces", "hyprland/submap"],
   "modules-center": [],
-  "modules-right": ["backlight"],
+  "modules-right": ["backlight", "battery"],
 
   "hyprland/workspaces": {
     "all-outputs": true,
@@ -25,5 +25,18 @@
     // "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"],
     "format-icons": ["󰝦", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
     "tooltip": false,
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 20,
+      "critical": 10,
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-full": "",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "tooltip-format": "{timeTo} - {power:.1f}W",
+    "tooltip": true,
   },
 }

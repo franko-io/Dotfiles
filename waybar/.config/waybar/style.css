@@ -51,3 +51,21 @@ window#waybar {
   color: @text;
   padding: 0px 8px;
 }
+
+/* Battery - https://github.com/Alexays/Waybar/wiki/Module:-Battery */
+#battery {
+  color: @text;
+  padding: 0px 10px 0px 4px;
+}
+
+#battery.warning {
+  color: @yellow;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+#battery.charging {
+  color: @green;
+}
