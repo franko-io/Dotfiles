@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["hyprland/workspaces", "hyprland/submap"],
   "modules-center": [],
-  "modules-right": ["bluetooth", "memory", "battery"],
+  "modules-right": ["backlight"],
 
   "hyprland/workspaces": {
     "all-outputs": true,
@@ -16,6 +16,14 @@
 
   "hyprland/submap": {
     "format": "",
+    "tooltip": false,
+  },
+
+  "backlight": {
+    "format": "{icon} {percent}%",
+    // "format-icons": ["󰋙", "󰫃", "󰫄", "󰫅", "󰫆", "󰫇", "󰫈"],
+    // "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"],
+    "format-icons": ["󰝦", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
     "tooltip": false,
   },
 }

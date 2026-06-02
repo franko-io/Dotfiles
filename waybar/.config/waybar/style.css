@@ -45,3 +45,9 @@ window#waybar {
   margin: 5px 0px 5px 7px;
   padding: 0px 6px;
 }
+
+/* Backlight - https://github.com/Alexays/Waybar/wiki/Module:-Backlight */
+#backlight {
+  color: @text;
+  padding: 0px 8px;
+}
