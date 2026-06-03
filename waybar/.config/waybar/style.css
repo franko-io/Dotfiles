@@ -69,3 +69,18 @@ window#waybar {
 #battery.charging {
   color: @green;
 }
+
+/* Bluetooth - https://github.com/Alexays/Waybar/wiki/Module:-Bluetooth */
+#bluetooth {
+  color: @text;
+  padding: 0px 4px;
+}
+
+#bluetooth.connected {
+  color: @blue;
+}
+
+#bluetooth.off,
+#bluetooth.disabled {
+  color: @surface1;
+}
