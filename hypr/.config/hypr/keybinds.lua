@@ -157,3 +157,16 @@ hl.bind(mainMod .. ' + G', function()
     smart_gaps.disable()
   end
 end)
+
+-- Toggle kanata, see https://github.com/jtroo/kanata
+local kanata_enabled = true
+hl.bind(ctrlMod .. ' + K', function()
+  kanata_enabled = not kanata_enabled
+  if kanata_enabled then
+    hl.dispatch(hl.dsp.exec_cmd('systemctl --user start kanata.service'))
+    hl.dispatch(hl.dsp.exec_cmd('notify-send "Kanata" "Enabled" --icon=input-keyboard'))
+  else
+    hl.dispatch(hl.dsp.exec_cmd('systemctl --user stop kanata.service'))
+    hl.dispatch(hl.dsp.exec_cmd('notify-send "Kanata" "Disabled" --icon=input-keyboard'))
+  end
+end)
