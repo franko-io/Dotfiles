@@ -16,11 +16,10 @@ return {
     vim.g.slime_preserve_curpos = 1
     vim.g.slime_bracketed_paste = 1
 
-    vim.keymap.set('n', '<leader>r', '<Plug>SlimeMotionSend', { remap = true, silent = false })
-    vim.keymap.set('n', '<leader>rs', '<Plug>SlimeLineSend', { remap = true, silent = false })
-    vim.keymap.set('x', '<leader>rs', '<Plug>SlimeRegionSend', { remap = true, silent = false })
-    vim.keymap.set('n', '<leader>rc', '<Plug>SlimeConfig', { remap = true, silent = false })
-    vim.keymap.set('n', '<leader>rc', '<Plug>SlimeConfig', { remap = true, silent = false })
-    vim.keymap.set('n', '<leader>rb', ':%SlimeSend<CR>', { remap = true, silent = false })
+    vim.keymap.set('n', '<leader>r', '<Plug>SlimeMotionSend', { remap = true, silent = false, desc = 'Slime: Send motion' })
+    vim.keymap.set('n', '<leader>rs', '<Plug>SlimeLineSend', { remap = true, silent = false, desc = 'Slime: Send line' })
+    vim.keymap.set('x', '<leader>rs', '<Plug>SlimeRegionSend', { remap = true, silent = false, desc = 'Slime: Send region' })
+    vim.keymap.set('n', '<leader>rc', '<Plug>SlimeConfig', { remap = true, silent = false, desc = 'Slime: Config' })
+    vim.keymap.set('n', '<leader>rb', ':%SlimeSend<CR>', { remap = true, silent = false, desc = 'Slime: Send buffer' })
   end,
 }
