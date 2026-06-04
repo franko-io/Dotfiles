@@ -84,3 +84,17 @@ window#waybar {
 #bluetooth.disabled {
   color: @surface1;
 }
+
+/* CPU - https://github.com/Alexays/Waybar/wiki/Module:-CPU */
+#cpu {
+  color: @text;
+  padding: 0px 8px;
+}
+
+#cpu.warning {
+  color: @yellow;
+}
+
+#cpu.critical {
+  color: @red;
+}

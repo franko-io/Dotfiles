@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["hyprland/workspaces", "hyprland/submap"],
   "modules-center": [],
-  "modules-right": ["bluetooth", "backlight", "battery"],
+  "modules-right": ["cpu", "bluetooth", "backlight", "battery"],
 
   "hyprland/workspaces": {
     "all-outputs": true,
@@ -45,11 +45,21 @@
     "format-off": "󰂲",
     "format-disabled": "󰂲",
     "format-on": "󰂯",
-    "format-connected": "󰂱 {num_connections}",
+    "format-connected": "󰂱{num_connections}",
     "tooltip-format": "{controller_alias} - {controller_address}",
     "tooltip-format-connected": "{controller_alias}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias} - {device_battery_percentage}%",
     "tooltip": true,
     "on-click": "ghostty --title=bluetui -e bluetui",
+  },
+  "cpu": {
+    "interval": 5,
+    "format": " {usage}%",
+    "max-length": 10,
+    "on-click": "ghostty --title=btop -e btop",
+    "states": {
+      "warning": 75,
+      "critical": 90,
+    },
   },
 }
