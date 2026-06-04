@@ -25,7 +25,7 @@ hl.bind(mainMod .. ' + D', hl.dsp.exec_cmd(menu))
 hl.bind(shiftMod .. ' + D', hl.dsp.exec_cmd('wofi-emoji'))
 hl.bind(shiftMod .. ' + E', hl.dsp.exec_cmd('~/.config/wofi/power_option/powermenu.sh'))
 hl.bind(mainMod .. ' + B', hl.dsp.exec_cmd(browser))
-hl.bind(mainMod .. ' + C', hl.dsp.exec_cmd(terminal .. ' --class=com.example.clipse -e clipse'))
+hl.bind(mainMod .. ' + C', hl.dsp.exec_cmd(terminal .. ' --title=clipse -e clipse'))
 
 -- Hyprshot, see https://github.com/Gustash/Hyprshot
 hl.bind(mainMod .. ' + PRINT', hl.dsp.exec_cmd('hyprshot -m window')) -- screenshot a window

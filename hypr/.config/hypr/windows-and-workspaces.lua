@@ -34,9 +34,28 @@ hl.window_rule({
 hl.window_rule({
   name = 'clipse',
   match = {
-    class = 'com.example.clipse',
+    title = 'clipse',
   },
   stay_focused = true,
   float = true,
   size = { 'monitor_w*0.65', 'monitor_h*0.65' },
+})
+
+hl.window_rule({
+  name = 'bluetui',
+  match = {
+    title = 'bluetui',
+  },
+  stay_focused = true,
+  float = true,
+  size = { 'monitor_w*0.5', 'monitor_h*0.5' },
+})
+
+hl.window_rule({
+  name = 'btop',
+  match = {
+    title = 'btop',
+  },
+  float = true,
+  size = { 'monitor_w*0.75', 'monitor_h*0.75' },
 })
