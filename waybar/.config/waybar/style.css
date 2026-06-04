@@ -11,6 +11,18 @@ window#waybar {
   color: @text;
 }
 
+/* Tooltip styling - https://github.com/Alexays/Waybar/wiki/Styling */
+tooltip {
+  background: @mantle;
+  border: 1px solid @surface0;
+  border-radius: 4px;
+}
+
+tooltip label {
+  color: @text;
+  padding: 2px 4px;
+}
+
 /* Hyprland workspaces - https://github.com/Alexays/Waybar/wiki/Module:-Hyprland#workspaces */
 #workspaces button {
   padding: 0px 1px;
