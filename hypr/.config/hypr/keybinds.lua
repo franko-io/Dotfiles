@@ -145,17 +145,24 @@ end)
 hl.bind(ctrlMod .. ' + Q', hl.dsp.exec_cmd('wl-freeze -a'))
 
 -- Toggle waybar, see https://github.com/Alexays/Waybar
-hl.bind(mainMod .. ' + W', hl.dsp.exec_cmd('killall -SIGUSR1 waybar'))
+local toggle_waybar = hl.dsp.exec_cmd('killall -SIGUSR1 waybar')
+hl.bind(mainMod .. ' + W', toggle_waybar)
 
 -- Toggle smart-gaps, see https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
-local smart_gaps_toggle = true
-hl.bind(mainMod .. ' + G', function()
+local smart_gaps_toggle = false
+local function toggle_smart_gaps()
   smart_gaps_toggle = not smart_gaps_toggle
   if smart_gaps_toggle then
     smart_gaps.enable()
   else
     smart_gaps.disable()
   end
+end
+
+hl.bind(mainMod .. ' + G', toggle_smart_gaps)
+hl.bind(mainMod .. ' + M', function() -- Toggle smart gaps and waybar
+  toggle_smart_gaps()
+  hl.dispatch(toggle_waybar)
 end)
 
 -- Toggle kanata, see https://github.com/jtroo/kanata
