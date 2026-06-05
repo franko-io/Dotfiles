@@ -110,3 +110,10 @@ tooltip label {
 #cpu.critical {
   color: @red;
 }
+
+/* Clock - ttps://github.com/Alexays/Waybar/wiki/Module:-Clock */
+#clock {
+  color: @text;
+  padding: 0px 8px;
+  font-feature-settings: "tnum";
+}
