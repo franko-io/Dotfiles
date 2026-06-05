@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["hyprland/workspaces", "hyprland/submap"],
   "modules-center": ["clock"],
-  "modules-right": ["cpu", "bluetooth", "backlight", "battery"],
+  "modules-right": ["memory", "cpu", "bluetooth", "backlight", "battery"],
 
   "hyprland/workspaces": {
     "all-outputs": true,
@@ -56,7 +56,7 @@
     "interval": 5,
     "format": " {usage}%",
     "max-length": 10,
-    "on-click": "ghostty --title=btop -e btop",
+    "on-click": "ghostty --title=btop -e btop -c $HOME/.config/btop/cpu-view.conf",
     "states": {
       "warning": 75,
       "critical": 90,
@@ -84,5 +84,16 @@
       "on-scroll-up": "shift_up",
       "on-scroll-down": "shift_down",
     },
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": " {percentage}%",
+    "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB ({percentage}%)",
+    "states": {
+      "warning": 75,
+      "critical": 90,
+    },
+    "on-click": "ghostty --title=btop -e btop -c $HOME/.config/btop/memory-view.conf",
   },
 }

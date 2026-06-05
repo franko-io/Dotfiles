@@ -85,7 +85,7 @@ tooltip label {
 /* Bluetooth - https://github.com/Alexays/Waybar/wiki/Module:-Bluetooth */
 #bluetooth {
   color: @text;
-  padding: 0px 4px;
+  padding: 0px 6px;
 }
 
 #bluetooth.connected {
@@ -116,4 +116,18 @@ tooltip label {
   color: @text;
   padding: 0px 8px;
   font-feature-settings: "tnum";
+}
+
+/* Memory - https://github.com/Alexays/Waybar/wiki/Module:-Memory */
+#memory {
+  color: @text;
+  padding: 0px 6px;
+}
+
+#memory.warning {
+  color: @yellow;
+}
+
+#memory.critical {
+  color: @red;
 }
