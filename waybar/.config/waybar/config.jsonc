@@ -3,6 +3,7 @@
   "modules-left": ["hyprland/workspaces", "hyprland/submap"],
   "modules-center": ["clock"],
   "modules-right": [
+    "temperature",
     "systemd-failed-units",
     "wireplumber",
     "wireplumber#source",
@@ -140,5 +141,15 @@
     "system": true,
     "user": true,
     "on-click": "ghostty --title=systemctl-tui -e systemctl-tui",
+  },
+  "temperature": {
+    "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
+    "input-filename": "temp1_input",
+    "interval": 5,
+    "warning-threshold": 75,
+    "critical-threshold": 90,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": false,
   },
 }

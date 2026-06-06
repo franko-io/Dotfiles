@@ -162,3 +162,18 @@ tooltip label {
   color: @red;
   font-weight: 800;
 }
+
+/* Temperature - https://github.com/Alexays/Waybar/wiki/Module:-Temperature */
+#temperature {
+  color: @text;
+  padding: 0px 4px;
+}
+
+#temperature.warning {
+  color: @yellow;
+}
+
+#temperature.critical {
+  color: @red;
+  font-weight: 800;
+}
