@@ -131,3 +131,13 @@ tooltip label {
 #memory.critical {
   color: @red;
 }
+
+/* Network - https://github.com/Alexays/Waybar/wiki/Module:-Network */
+#network {
+  color: @text;
+  padding: 0px 6px;
+}
+
+#network.disabled {
+  color: @surface1;
+}

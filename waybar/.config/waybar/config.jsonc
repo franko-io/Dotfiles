@@ -2,8 +2,14 @@
   "layer": "top",
   "modules-left": ["hyprland/workspaces", "hyprland/submap"],
   "modules-center": ["clock"],
-  "modules-right": ["memory", "cpu", "bluetooth", "backlight", "battery"],
-
+  "modules-right": [
+    "network",
+    "memory",
+    "cpu",
+    "bluetooth",
+    "backlight",
+    "battery",
+  ],
   "hyprland/workspaces": {
     "all-outputs": true,
     "show-special": true,
@@ -13,12 +19,10 @@
       "magic": "",
     },
   },
-
   "hyprland/submap": {
     "format": "",
     "tooltip": false,
   },
-
   "backlight": {
     "format": "{icon} {percent}%",
     // "format-icons": ["󰋙", "󰫃", "󰫄", "󰫅", "󰫆", "󰫇", "󰫈"],
@@ -85,7 +89,6 @@
       "on-scroll-down": "shift_down",
     },
   },
-
   "memory": {
     "interval": 5,
     "format": " {percentage}%",
@@ -95,5 +98,18 @@
       "critical": 90,
     },
     "on-click": "ghostty --title=btop -e btop -c $HOME/.config/btop/memory-view.conf",
+  },
+  "network": {
+    "interval": 3,
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "󰖪",
+    "format-disabled": "󰖪",
+    "format-linked": "󰈀",
+    "format-alt": "󰇚 {bandwidthDownBytes} 󰕒 {bandwidthUpBytes}",
+    "tooltip-format-wifi": "{essid} — {signalStrength}% ({signaldBm}dBm)\n󰩟 {ipaddr}/{cidr}",
+    "tooltip-format-ethernet": "󰈀 {ifname}\n󰩟 {ipaddr}/{cidr}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click-right": "nmrs",
   },
 }
