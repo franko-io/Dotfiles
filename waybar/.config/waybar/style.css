@@ -141,3 +141,14 @@ tooltip label {
 #network.disabled {
   color: @surface1;
 }
+
+/* Audio - https://github.com/Alexays/Waybar/wiki/Module:-WirePlumber */
+#wireplumber {
+  color: @text;
+  padding: 0px 6px;
+}
+
+#wireplumber.muted,
+#wireplumber.sink-muted {
+  color: @surface1;
+}
