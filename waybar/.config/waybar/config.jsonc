@@ -3,6 +3,7 @@
   "modules-left": ["hyprland/workspaces", "hyprland/submap"],
   "modules-center": ["clock"],
   "modules-right": [
+    "systemd-failed-units",
     "wireplumber",
     "wireplumber#source",
     "network",
@@ -131,5 +132,13 @@
     "scroll-step": 2,
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
     "on-click-right": "ghostty --title=wiremix -e wiremix -v input",
+  },
+  "systemd-failed-units": {
+    "hide-on-ok": false,
+    "format": "✗ {nr_failed}",
+    "format-ok": "✓",
+    "system": true,
+    "user": true,
+    "on-click": "ghostty --title=systemctl-tui -e systemctl-tui",
   },
 }
