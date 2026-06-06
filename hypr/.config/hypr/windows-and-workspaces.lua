@@ -79,3 +79,13 @@ hl.window_rule({
   stay_focused = true,
   size = { 'monitor_w*0.5', 'monitor_h*0.5' },
 })
+
+hl.window_rule({
+  name = 'systemctl-tui',
+  match = {
+    title = 'systemctl-tui',
+  },
+  float = true,
+  stay_focused = false,
+  size = { 'monitor_w*0.75', 'monitor_h*0.75' },
+})
