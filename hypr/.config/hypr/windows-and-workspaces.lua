@@ -52,6 +52,16 @@ hl.window_rule({
 })
 
 hl.window_rule({
+  name = 'wiremix',
+  match = {
+    title = 'wiremix',
+  },
+  stay_focused = true,
+  float = true,
+  size = { 'monitor_w*0.5', 'monitor_h*0.5' },
+})
+
+hl.window_rule({
   name = 'btop',
   match = {
     title = 'btop',
