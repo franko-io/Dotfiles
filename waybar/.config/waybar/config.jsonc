@@ -59,12 +59,14 @@
     "tooltip-format-enumerate-connected": "{device_alias} - {device_battery_percentage}%",
     "tooltip": true,
     "on-click": "ghostty --title=bluetui -e bluetui",
+    "on-click-right": "ghostty --title=bluetui -e bluetui",
   },
   "cpu": {
     "interval": 5,
     "format": " {usage}%",
     "max-length": 10,
     "on-click": "ghostty --title=btop -e btop -c $HOME/.config/btop/cpu-view.conf",
+    "on-click-right": "ghostty --title=btop -e btop -c $HOME/.config/btop/cpu-view.conf",
     "states": {
       "warning": 75,
       "critical": 90,
@@ -88,10 +90,11 @@
       },
     },
     "actions": {
-      "on-click-right": "mode",
+      "on-click-middle": "mode",
       "on-scroll-up": "shift_up",
       "on-scroll-down": "shift_down",
     },
+    "on-click-right": "xdg-open https://calendar.google.com/",
   },
   "memory": {
     "interval": 5,
@@ -102,6 +105,7 @@
       "critical": 90,
     },
     "on-click": "ghostty --title=btop -e btop -c $HOME/.config/btop/memory-view.conf",
+    "on-click-right": "ghostty --title=btop -e btop -c $HOME/.config/btop/memory-view.conf",
   },
   "network": {
     "interval": 3,
@@ -141,6 +145,7 @@
     "system": true,
     "user": true,
     "on-click": "ghostty --title=systemctl-tui -e systemctl-tui",
+    "on-click-right": "ghostty --title=systemctl-tui -e systemctl-tui",
   },
   "temperature": {
     "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
