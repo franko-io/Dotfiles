@@ -27,6 +27,7 @@ vim.opt.breakindent = true
 vim.opt.undofile = true
 
 -- Search
+vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
