@@ -59,3 +59,13 @@ hl.window_rule({
   float = true,
   size = { 'monitor_w*0.75', 'monitor_h*0.75' },
 })
+
+hl.window_rule({
+  name = 'nmrs',
+  match = {
+    class = 'org.nmrs.ui',
+  },
+  float = true,
+  stay_focused = true,
+  size = { 'monitor_w*0.5', 'monitor_h*0.5' },
+})
