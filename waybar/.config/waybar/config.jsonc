@@ -3,6 +3,7 @@
   "modules-left": ["hyprland/workspaces", "hyprland/submap"],
   "modules-center": ["clock"],
   "modules-right": [
+    "tray",
     "temperature",
     "systemd-failed-units",
     "wireplumber",
@@ -156,5 +157,10 @@
     "format": "{icon} {temperatureC}°C",
     "format-icons": ["", "", "", "", ""],
     "tooltip": false,
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8,
+    "show-passive-items": true,
   },
 }

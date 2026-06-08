@@ -177,3 +177,11 @@ tooltip label {
   color: @red;
   font-weight: 800;
 }
+
+/* Tray - https://github.com/Alexays/Waybar/wiki/Module:-Tray */
+#tray {
+  padding: 0px 6px;
+}
+#tray > .needs-attention {
+  color: @red;
+}
