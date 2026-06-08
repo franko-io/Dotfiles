@@ -182,6 +182,24 @@ tooltip label {
 #tray {
   padding: 0px 6px;
 }
+
 #tray > .needs-attention {
   color: @red;
+}
+
+/* Power Profiles Daemon - https://github.com/Alexays/Waybar/wiki/Module:-PowerProfilesDaemon */
+#power-profiles-daemon {
+  padding: 0px 6px;
+}
+
+#power-profiles-daemon.performance {
+  color: @red;
+}
+
+#power-profiles-daemon.balanced {
+  color: @blue;
+}
+
+#power-profiles-daemon.power-saver {
+  color: @green;
 }

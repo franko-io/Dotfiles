@@ -3,6 +3,7 @@
   "modules-left": ["hyprland/workspaces", "hyprland/submap"],
   "modules-center": ["clock"],
   "modules-right": [
+    "power-profiles-daemon",
     "tray",
     "temperature",
     "systemd-failed-units",
@@ -162,5 +163,16 @@
     "icon-size": 18,
     "spacing": 8,
     "show-passive-items": true,
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "{profile}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "󰈐",
+      "performance": "󱐋",
+      "balanced": "󰾅",
+      "power-saver": "󰌪",
+    },
   },
 }
