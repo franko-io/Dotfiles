@@ -34,6 +34,7 @@ return {
     { "<leader>sk", function() Snacks.picker.keymaps({ layout = "ivy" }) end, desc = "Keymaps" },
     { "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
     { "<leader>sc", function() Snacks.picker.colorschemes({ layout = "vertical" }) end, desc = "Colorschemes" },
+    { "<leader>sm", function() Snacks.picker.marks() end, desc = "Marks" },
 
     -- Explorer
     { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },

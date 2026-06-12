@@ -1,4 +1,4 @@
-vim.keymap.set('n', '<leader>sm', '<cmd>Mason<cr>', { desc = 'Open Mason' })
+vim.keymap.set('n', '<leader>sM', '<cmd>Mason<cr>', { desc = 'Open Mason' })
 
 return {
   'mason-org/mason-lspconfig.nvim',
