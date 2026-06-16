@@ -11,6 +11,7 @@ font-family-bold-italic = JetBrainsMono NFM ExtraBold
 # Random settings
 mouse-hide-while-typing = true
 resize-overlay = never
+window-padding-x = 5
 window-padding-balance = true
 confirm-close-surface = false
 mouse-scroll-multiplier = 0.75
