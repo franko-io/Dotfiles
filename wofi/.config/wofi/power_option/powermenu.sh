@@ -16,7 +16,7 @@ case ${op} in
         systemctl suspend
         ;;
     logout)
-        hyprctl dispatch exit
+        hyprctl dispatch 'hl.dsp.exit()'
         ;;
     hibernate)
         systemctl hibernate
