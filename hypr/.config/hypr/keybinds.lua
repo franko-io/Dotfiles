@@ -28,9 +28,9 @@ hl.bind(mainMod .. ' + B', hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. ' + C', hl.dsp.exec_cmd(terminal .. ' --title=clipse -e clipse'))
 
 -- Hyprshot, see https://github.com/Gustash/Hyprshot
-hl.bind(mainMod .. ' + PRINT', hl.dsp.exec_cmd('hyprshot -m window')) -- screenshot a window
-hl.bind('PRINT', hl.dsp.exec_cmd('hyprshot -m output')) -- screenshot a monitor
-hl.bind(shiftMod .. ' + PRINT', hl.dsp.exec_cmd('hyprshot -m region')) -- screenshot a region
+hl.bind(mainMod .. ' + PRINT', hl.dsp.exec_cmd('hyprshot -m window -o $HOME/Pictures/Screenshots')) -- screenshot a window
+hl.bind('PRINT', hl.dsp.exec_cmd('hyprshot -m output -o $HOME/Pictures/Screenshots')) -- screenshot a monitor
+hl.bind(shiftMod .. ' + PRINT', hl.dsp.exec_cmd('hyprshot -m region -o $HOME/Pictures/Screenshots')) -- screenshot a region
 -- Save hyprshot to clipboard
 hl.bind(mainMod .. ' + CONTROL + PRINT', hl.dsp.exec_cmd('hyprshot -m window --clipboard-only'))
 hl.bind('CONTROL + PRINT', hl.dsp.exec_cmd('hyprshot -m output --clipboard-only'))
