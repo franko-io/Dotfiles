@@ -26,7 +26,7 @@ tooltip label {
 /* Hyprland workspaces - https://github.com/Alexays/Waybar/wiki/Module:-Hyprland#workspaces */
 #workspaces button {
   padding: 0px 1px;
-  margin: 5px 0px 5px 7px;
+  margin: 5px 0px 5px 8px;
   border-radius: 2px;
   color: @text;
   background: transparent;
@@ -54,7 +54,7 @@ tooltip label {
   color: @base;
   font-weight: 800;
   border-radius: 2px;
-  margin: 5px 0px 5px 7px;
+  margin: 5px 0px 5px 8px;
   padding: 0px 6px;
 }
 
@@ -113,7 +113,7 @@ tooltip label {
 
 /* Clock - ttps://github.com/Alexays/Waybar/wiki/Module:-Clock */
 #clock {
-  color: @text;
+  color: @lavender;
   padding: 0px 8px;
   font-feature-settings: "tnum";
 }
@@ -134,7 +134,7 @@ tooltip label {
 
 /* Network - https://github.com/Alexays/Waybar/wiki/Module:-Network */
 #network {
-  color: @text;
+  color: @green;
   padding: 0px 6px;
 }
 
