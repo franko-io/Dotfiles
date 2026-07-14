@@ -156,11 +156,16 @@ tooltip label {
 /* Systemd failed units - https://github.com/Alexays/Waybar/wiki/Module:-Systemd-failed-units */
 #systemd-failed-units {
   padding: 0px 6px;
+  font-weight: 800;
+  margin: 5px 5px 5px 0px;
+}
+
+#systemd-failed-units.ok {
+  color: @green;
 }
 
 #systemd-failed-units.degraded {
   color: @red;
-  font-weight: 800;
 }
 
 /* Temperature - https://github.com/Alexays/Waybar/wiki/Module:-Temperature */
