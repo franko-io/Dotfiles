@@ -1,6 +1,10 @@
 {
   "layer": "top",
-  "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/submap",
+    "group/group-media",
+  ],
   "modules-center": ["clock"],
   "modules-right": [
     "tray",
@@ -21,6 +25,26 @@
   "hyprland/submap": {
     "format": "",
     "tooltip": false,
+  },
+  "custom/media-playing": {
+    "exec": "~/.config/waybar/scripts/media-playing.sh",
+    "escape": true,
+    "tooltip": false,
+    "on-click": "playerctl play-pause",
+    "on-click-middle": "playerctl previous",
+    "on-click-right": "playerctl next",
+    "on-scroll-up": "playerctl position 5+",
+    "on-scroll-down": "playerctl position 5-",
+  },
+  "custom/media-animation": {
+    "exec": "~/.config/waybar/scripts/media-animation.sh",
+    "tooltip": false,
+  },
+  "custom/media-time": {
+    "exec": "~/.config/waybar/scripts/media-time.sh",
+    "escape": true,
+    "tooltip": false,
+    "interval": 1,
   },
   "backlight": {
     "format": "{icon} {percent}%",
@@ -166,6 +190,14 @@
       "balanced": "󰾅",
       "power-saver": "󰌪",
     },
+  },
+  "group/group-media": {
+    "orientation": "inherit",
+    "modules": [
+      "custom/media-animation",
+      "custom/media-playing",
+      "custom/media-time",
+    ],
   },
   "group/audio": {
     "orientation": "inherit",

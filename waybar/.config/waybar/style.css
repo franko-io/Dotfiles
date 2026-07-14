@@ -215,3 +215,23 @@ tooltip label {
   margin: 5px 10px 5px 0px;
   color: @maroon;
 }
+
+#group-media {
+  color: @teal;
+  margin: 5px 0px 5px 80px;
+}
+
+#custom-media-animation {
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+#custom-media-playing {
+  margin-right: 10px;
+}
+
+#custom-media-time {
+  font-size: 14px;
+  color: @overlay1;
+  margin: 6px 0px 4px 0px;
+}
