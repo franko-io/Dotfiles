@@ -208,3 +208,10 @@ tooltip label {
 #power-profiles-daemon.power-saver {
   color: @green;
 }
+
+/* Group - https://github.com/Alexays/Waybar/wiki/Module:-Group */
+#group-power {
+  padding: 0px 6px;
+  margin: 5px 10px 5px 0px;
+  color: @maroon;
+}
