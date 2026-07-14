@@ -67,7 +67,7 @@ tooltip label {
 /* Battery - https://github.com/Alexays/Waybar/wiki/Module:-Battery */
 #battery {
   color: @text;
-  padding: 0px 10px 0px 4px;
+  padding: 0px 4px 0px 4px;
 }
 
 #battery.warning {
