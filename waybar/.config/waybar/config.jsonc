@@ -3,18 +3,11 @@
   "modules-left": ["hyprland/workspaces", "hyprland/submap"],
   "modules-center": ["clock"],
   "modules-right": [
-    "power-profiles-daemon",
     "tray",
-    "temperature",
-    "systemd-failed-units",
-    "wireplumber",
-    "wireplumber#source",
+    "group/audio",
+    "group/hardware",
     "network",
-    "memory",
-    "cpu",
-    "bluetooth",
-    "backlight",
-    "battery",
+    "group/group-power",
   ],
   "hyprland/workspaces": {
     "all-outputs": true,
@@ -173,5 +166,33 @@
       "balanced": "󰾅",
       "power-saver": "󰌪",
     },
+  },
+  "group/audio": {
+    "orientation": "inherit",
+    "modules": ["wireplumber", "wireplumber#source"],
+  },
+  "group/hardware": {
+    "orientation": "inherit",
+    "modules": ["memory", "cpu", "temperature", "battery"],
+  },
+  "group/group-power": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "group-power",
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "custom/powermenu",
+      "backlight",
+      "bluetooth",
+      "power-profiles-daemon",
+      "systemd-failed-units",
+    ],
+  },
+  "custom/powermenu": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/.config/wofi/power_option/powermenu.sh",
   },
 }
