@@ -61,7 +61,7 @@ tooltip label {
 /* Backlight - https://github.com/Alexays/Waybar/wiki/Module:-Backlight */
 #backlight {
   color: @text;
-  padding: 0px 8px;
+  padding: 0px 4px;
 }
 
 /* Battery - https://github.com/Alexays/Waybar/wiki/Module:-Battery */
@@ -85,7 +85,7 @@ tooltip label {
 /* Bluetooth - https://github.com/Alexays/Waybar/wiki/Module:-Bluetooth */
 #bluetooth {
   color: @text;
-  padding: 0px 6px;
+  padding: 0px 4px;
 }
 
 #bluetooth.connected {
