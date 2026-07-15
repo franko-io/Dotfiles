@@ -3,3 +3,4 @@ btop/.config/btop/btop.log
 kanata/.config/kanata/kanata.kbd.bak
 systemd/.config/systemd/user/default.target.wants/
 nvim/.config/nvim/lazy-lock.json
+waybar/.config/waybar/auto-reload.sh
