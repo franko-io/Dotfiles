@@ -29,7 +29,7 @@ local monitors = {
   {
     output = 'desc:BNQ BenQ XL2430T ZAF04012SL0',
     mode = 'preferred',
-    position = 'auto',
+    position = '0x-1080',
     scale = 'auto',
     disabled = false,
   },
