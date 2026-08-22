@@ -33,6 +33,13 @@ local monitors = {
     scale = 'auto',
     disabled = false,
   },
+  {
+    output = 'desc:Dell Inc. DELL U2715H GH85D88719SL',
+    mode = 'preferred',
+    position = '-320x-1440',
+    scale = 'auto',
+    disabled = false,
+  },
 }
 
 for _, val in ipairs(monitors) do
