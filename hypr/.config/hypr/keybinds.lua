@@ -177,3 +177,17 @@ hl.bind(ctrlMod .. ' + K', function()
     hl.dispatch(hl.dsp.exec_cmd('notify-send "Kanata" "Disabled" --icon=input-keyboard'))
   end
 end)
+
+-- Toggle hypridle, see https://github.com/hyprwm/hypridle
+local hypridle_enabled = true
+hl.bind(ctrlMod .. ' + I', function()
+  hypridle_enabled = not hypridle_enabled
+  if hypridle_enabled then
+    hl.dispatch(hl.dsp.exec_cmd('systemctl --user start hypridle.service'))
+    hl.dispatch(hl.dsp.exec_cmd('notify-send "Hypridle" "Enabled" --icon=input-keyboard'))
+  else
+    hl.dispatch(hl.dsp.exec_cmd('systemctl --user stop hypridle.service'))
+    hl.dispatch(hl.dsp.exec_cmd('notify-send "Hypridle" "Disabled" --icon=input-keyboard'))
+  end
+end)
+
