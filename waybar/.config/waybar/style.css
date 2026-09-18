@@ -23,6 +23,13 @@ tooltip label {
   padding: 2px 4px;
 }
 
+/* Arch logo */
+#custom-arch {
+  color: @sapphire;
+  font-size: 22px;
+  padding: 0px 8px 0px 14px;
+}
+
 /* Hyprland workspaces - https://github.com/Alexays/Waybar/wiki/Module:-Hyprland#workspaces */
 #workspaces button {
   padding: 0px 1px;
