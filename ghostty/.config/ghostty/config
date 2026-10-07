@@ -15,3 +15,6 @@ window-padding-x = 5
 window-padding-balance = true
 confirm-close-surface = false
 mouse-scroll-multiplier = 0.75
+
+# Keybinds
+keybind = ctrl+enter=unbind
