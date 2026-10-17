@@ -13,7 +13,7 @@ local ctrlMod = 'CTRL + SUPER'
 -- My programs
 local terminal = 'ghostty'
 local fileManager = 'nautilus'
-local menu = 'wofi --show drun'
+local menu = 'rofi -show drun'
 local browser = 'helium-browser'
 
 -- See https://wiki.hypr.land/Configuring/Basics/Binds/
@@ -22,8 +22,8 @@ local browser = 'helium-browser'
 hl.bind(mainMod .. ' + RETURN', hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. ' + E', hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. ' + D', hl.dsp.exec_cmd(menu))
-hl.bind(shiftMod .. ' + D', hl.dsp.exec_cmd('wofi-emoji'))
-hl.bind(shiftMod .. ' + E', hl.dsp.exec_cmd('~/.config/wofi/power_option/powermenu.sh'))
+hl.bind(shiftMod .. ' + D', hl.dsp.exec_cmd('rofi -modi emoji -show emoji'))
+hl.bind(shiftMod .. ' + E', hl.dsp.exec_cmd('$XDG_CONFIG_HOME/rofi/powermenu.sh'))
 hl.bind(mainMod .. ' + B', hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. ' + C', hl.dsp.exec_cmd(terminal .. ' --title=clipse -e clipse'))
 
@@ -190,4 +190,3 @@ hl.bind(ctrlMod .. ' + I', function()
     hl.dispatch(hl.dsp.exec_cmd('notify-send "Hypridle" "Disabled" --icon=input-keyboard'))
   end
 end)
-
