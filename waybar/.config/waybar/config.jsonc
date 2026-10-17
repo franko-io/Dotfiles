@@ -33,7 +33,7 @@
     "tooltip": false,
   },
   "custom/media-playing": {
-    "exec": "~/.config/waybar/scripts/media-playing.sh",
+    "exec": "$XDG_CONFIG_HOME/waybar/scripts/media-playing.sh",
     "escape": true,
     "tooltip": false,
     "on-click": "playerctl play-pause",
@@ -43,11 +43,11 @@
     "on-scroll-down": "playerctl position 5-",
   },
   "custom/media-animation": {
-    "exec": "~/.config/waybar/scripts/media-animation.sh",
+    "exec": "$XDG_CONFIG_HOME/waybar/scripts/media-animation.sh",
     "tooltip": false,
   },
   "custom/media-time": {
-    "exec": "~/.config/waybar/scripts/media-time.sh",
+    "exec": "$XDG_CONFIG_HOME/waybar/scripts/media-time.sh",
     "escape": true,
     "tooltip": false,
     "interval": 1,
@@ -233,6 +233,6 @@
   "custom/powermenu": {
     "format": "",
     "tooltip": false,
-    "on-click": "~/.config/wofi/power_option/powermenu.sh",
+    "on-click": "$XDG_CONFIG_HOME/rofi/powermenu.sh",
   },
 }

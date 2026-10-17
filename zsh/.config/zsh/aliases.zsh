@@ -11,5 +11,5 @@ alias clear='echo "Do not use clear, use Ctrl+L instead"'
 alias -- -='cd -'
 
 # Re-source zsh
-alias reload='source ~/.config/zsh/.zshrc'
+alias reload='source $XDG_CONFIG_HOME/zsh/.zshrc'
 
