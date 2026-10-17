@@ -29,6 +29,7 @@ zstyle ':completion:*:git-checkout:*' sort false
 
 # fzf-tab
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
+zstyle ':fzf-tab:*' fzf-flags --height=60%
 zstyle ':fzf-tab:*' switch-group '<' '>'
 zstyle ':fzf-tab:complete:cd:*' \
   fzf-preview 'eza --all --tree --ignore-glob ".git" --color=always --icons=always $realpath'
