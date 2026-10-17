@@ -13,7 +13,7 @@ local monitors = {
     disabled = false,
   },
   {
-    output = 'desc:Iiyama North America PLE2483H 1127850724357',
+    output = 'desc:iiyama Corporation PLE2483H 1127850724357',
     mode = 'preferred',
     position = '-960x-1080',
     scale = 'auto',
