@@ -21,9 +21,10 @@ local browser = 'helium-browser'
 -- My programs
 hl.bind(mainMod .. ' + RETURN', hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. ' + E', hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. ' + D', hl.dsp.exec_cmd(menu))
-hl.bind(shiftMod .. ' + D', hl.dsp.exec_cmd('rofi -modi emoji -show emoji'))
-hl.bind(shiftMod .. ' + E', hl.dsp.exec_cmd('$XDG_CONFIG_HOME/rofi/powermenu.sh'))
+hl.bind(mainMod .. ' + D', hl.dsp.exec_cmd('rofi -show drun'))
+hl.bind(shiftMod .. ' + D', hl.dsp.exec_cmd('rofi -show run'))
+hl.bind(shiftMod .. ' + E', hl.dsp.exec_cmd('rofi -modi emoji -show emoji'))
+hl.bind(ctrlMod .. ' + Q', hl.dsp.exec_cmd('$XDG_CONFIG_HOME/rofi/powermenu.sh'))
 hl.bind(mainMod .. ' + B', hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. ' + C', hl.dsp.exec_cmd(terminal .. ' --title=clipse -e clipse'))
 
@@ -142,7 +143,7 @@ hl.define_submap('toggle-monitors', function()
 end)
 
 -- wl-freeze, see https://github.com/Zerodya/wl-freeze
-hl.bind(ctrlMod .. ' + Q', hl.dsp.exec_cmd('wl-freeze -a'))
+hl.bind(ctrlMod .. ' + F', hl.dsp.exec_cmd('wl-freeze -a'))
 
 -- Toggle waybar, see https://github.com/Alexays/Waybar
 local toggle_waybar = hl.dsp.exec_cmd('killall -SIGUSR1 waybar')
