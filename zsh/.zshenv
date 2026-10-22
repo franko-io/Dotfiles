@@ -7,6 +7,9 @@ export XDG_STATE_HOME="$HOME/.local/state"
 # --------- Zsh config directory ---------
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+# --------- SSH agent ---------
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # --------- Editor ---------
 export EDITOR="nvim"
 export VISUAL="nvim"
