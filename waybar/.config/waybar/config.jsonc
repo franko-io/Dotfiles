@@ -89,8 +89,8 @@
     "interval": 5,
     "format": " {usage}%",
     "max-length": 10,
-    "on-click": "ghostty --title=btop -e btop -c $HOME/.config/btop/cpu-view.conf",
-    "on-click-right": "ghostty --title=btop -e btop -c $HOME/.config/btop/cpu-view.conf",
+    "on-click": "ghostty --title=btop -e btop -c $XDG_CONFIG_HOME/btop/cpu-view.conf",
+    "on-click-right": "ghostty --title=btop -e btop -c $XDG_CONFIG_HOME/btop/cpu-view.conf",
     "states": {
       "warning": 75,
       "critical": 90,
@@ -128,8 +128,8 @@
       "warning": 75,
       "critical": 90,
     },
-    "on-click": "ghostty --title=btop -e btop -c $HOME/.config/btop/memory-view.conf",
-    "on-click-right": "ghostty --title=btop -e btop -c $HOME/.config/btop/memory-view.conf",
+    "on-click": "ghostty --title=btop -e btop -c $XDG_CONFIG_HOME/btop/memory-view.conf",
+    "on-click-right": "ghostty --title=btop -e btop -c $XDG_CONFIG_HOME/btop/memory-view.conf",
   },
   "network": {
     "interval": 3,

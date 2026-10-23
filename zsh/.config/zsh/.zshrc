@@ -61,7 +61,7 @@ fi
 
 # --------- Shell integrations ---------
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.json)"
+eval "$(oh-my-posh init zsh --config $XDG_CONFIG_HOME/ohmyposh/config.json)"
 
 # --------- Modular configs ---------
 # fzf + anything with bindkey calls must load AFTER zsh-vi-mode
